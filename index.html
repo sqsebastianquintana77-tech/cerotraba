@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerotraba - Automatización de Procesos con Inteligencia Artificial</title>
+    <meta name="description" content="Agencia líder en automatización con IA. Diseñamos e integramos agentes de Inteligencia Artificial, chatbots y flujos de trabajo inteligentes para llevar tu empresa a cero trabas.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Cerotraba - Automatización de Procesos con Inteligencia Artificial">
+    <meta property="og:description" content="Optimiza tus operaciones y reduce costos. Flujos automáticos, agentes inteligentes y cero fricción.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <div id="canvas-container" aria-hidden="true"></div>
+
+    <div class="app-content">
+        <!-- HEADER / NAVIGATION -->
+        <header id="main-header">
+            <div class="container">
+                <a href="#hero" class="logo" id="logo-brand">
+                    <img src="logo.png" alt="CeroTraba" class="logo-img">
+                </a>
+                
+                <nav class="nav-links" id="nav-menu">
+                    <a href="#hero" class="nav-link active" id="link-hero">Inicio</a>
+                    <a href="#servicios" class="nav-link" id="link-servicios">Servicios</a>
+                    <a href="#simulador" class="nav-link" id="link-simulador">Simulador</a>
+                    <a href="#calculadora" class="nav-link" id="link-calculadora">Calculadora ROI</a>
+                    <a href="#contacto" class="nav-link" id="link-contacto">Contacto</a>
+                </nav>
+                
+                <div class="nav-cta">
+                    <a href="#contacto" class="btn btn-primary" id="header-cta-btn">Agendar Demo</a>
+                </div>
+
+                <button class="hamburger" id="hamburger-toggle" aria-label="Abrir menú de navegación" aria-controls="nav-menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- HERO SECTION -->
+            <section id="hero" class="scroll-section">
+                <div class="container">
+                    <div class="hero-badge">
+                        <span class="dot"></span>
+                        <span>Agencia de Automatización con IA</span>
+                    </div>
+                    <h1 class="hero-title">Lleva tus operaciones a <br><span class="accent-text">Cero Trababajos</span> con IA</h1>
+                    <p class="hero-subtitle">
+                        Diseñamos, conectamos e implementamos agentes inteligentes y flujos autónomos que eliminan las tareas manuales y disparan tu eficiencia.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#contacto" class="btn btn-primary" id="hero-primary-cta">Iniciar Proyecto</a>
+                        <a href="#simulador" class="btn btn-secondary" id="hero-secondary-cta">Ver Simulador</a>
+                    </div>
+                </div>
+                
+                <div class="scroll-hint" aria-hidden="true">
+                    <span>Desliza</span>
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICES SECTION -->
+            <section id="servicios" class="scroll-section">
+                <div class="container">
+                    <div class="section-grid">
+                        <div class="section-header">
+                            <span class="section-tag">Nuestras Soluciones</span>
+                            <h2 class="section-title">Automatizaciones que escalan tu negocio</h2>
+                            <p class="section-desc">
+                                Quitamos las fricciones operativas integrando los últimos modelos de IA en tu infraestructura de software actual.
+                            </p>
+                            <a href="#contacto" class="btn btn-primary" id="services-cta-btn">Quiero automatizar mi empresa</a>
+                        </div>
+                        
+                        <div class="services-list">
+                            <div class="service-item" id="service-crm">
+                                <div class="service-icon" aria-hidden="true">⚙️</div>
+                                <div class="service-info">
+                                    <h3>Integración de CRM y Leads</h3>
+                                    <p>Captura, califica y registra leads automáticamente desde cualquier canal (correo, WhatsApp, ads) directo a tu CRM en segundos.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-item" id="service-chatbots">
+                                <div class="service-icon" aria-hidden="true">💬</div>
+                                <div class="service-info">
+                                    <h3>Agentes de Soporte 24/7</h3>
+                                    <p>Desarrollamos bots inteligentes capaces de resolver dudas complejas, consultar bases de datos internas y escalar casos difíciles a humanos.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-item" id="service-ocr">
+                                <div class="service-icon" aria-hidden="true">📄</div>
+                                <div class="service-info">
+                                    <h3>Procesamiento de Documentos</h3>
+                                    <p>Extracción automatizada de datos clave en facturas, contratos y reportes escaneados usando modelos de lenguaje avanzados (LLM).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SIMULATOR SECTION -->
+            <section id="simulador" class="scroll-section">
+                <div class="container">
+                    <div class="sim-container">
+                        <span class="section-tag">Demostración en Vivo</span>
+                        <h2 class="section-title">El poder de la IA en acción</h2>
+                        <p class="section-desc" style="max-width: 600px; margin-bottom: 20px;">
+                            Selecciona una plantilla de automatización para ver cómo fluye la información a través de nuestro núcleo de IA.
+                        </p>
+                        
+                        <div class="flow-playground glass-card">
+                            <div class="flow-controls">
+                                <button class="flow-btn active" id="flow-btn-leads" data-flow="leads">
+                                    <div class="flow-btn-icon" aria-hidden="true">🎯</div>
+                                    <div class="flow-btn-info">
+                                        <h4>Captura de Leads</h4>
+                                        <p>WhatsApp a HubSpot</p>
+                                    </div>
+                                </button>
+                                
+                                <button class="flow-btn" id="flow-btn-facturas" data-flow="facturas">
+                                    <div class="flow-btn-icon" aria-hidden="true">📥</div>
+                                    <div class="flow-btn-info">
+                                        <h4>Facturación Inteligente</h4>
+                                        <p>PDF a ERP + Notificación</p>
+                                    </div>
+                                </button>
+                                
+                                <button class="flow-btn" id="flow-btn-soporte" data-flow="soporte">
+                                    <div class="flow-btn-icon" aria-hidden="true">🤖</div>
+                                    <div class="flow-btn-info">
+                                        <h4>Clasificación de Ticket</h4>
+                                        <p>Email a Slack & Zendesk</p>
+                                    </div>
+                                </button>
+                            </div>
+                            
+                            <div class="flow-canvas-panel">
+                                <div class="flow-visualizer">
+                                    <!-- Node 1: Origin -->
+                                    <div class="flow-node active" id="node-origin">
+                                        <div class="node-icon-wrapper" id="node-origin-icon">💬</div>
+                                        <span class="node-title" id="node-origin-title">WhatsApp Client</span>
+                                    </div>
+                                    
+                                    <!-- Connection 1 -->
+                                    <div class="flow-pipe" id="pipe-1">
+                                        <div class="flow-pulse"></div>
+                                    </div>
+                                    
+                                    <!-- Node 2: AI Processor (represented by background cube but has UI representation) -->
+                                    <div class="flow-node" id="node-ai">
+                                        <div class="node-icon-wrapper" id="node-ai-icon">🧠</div>
+                                        <span class="node-title" id="node-ai-title">IA Cerotraba</span>
+                                    </div>
+                                    
+                                    <!-- Connection 2 -->
+                                    <div class="flow-pipe" id="pipe-2">
+                                        <div class="flow-pulse"></div>
+                                    </div>
+                                    
+                                    <!-- Node 3: Target -->
+                                    <div class="flow-node" id="node-target">
+                                        <div class="node-icon-wrapper" id="node-target-icon">📁</div>
+                                        <span class="node-title" id="node-target-title">HubSpot CRM</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flow-explanation" id="flow-explanation-text">
+                                    El cliente escribe por WhatsApp. La IA analiza la consulta, extrae los datos de contacto y el interés de compra, y crea un prospecto estructurado en el CRM de inmediato.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROI CALCULATOR SECTION -->
+            <section id="calculadora" class="scroll-section">
+                <div class="container">
+                    <div class="roi-container">
+                        <div>
+                            <span class="section-tag">Calculadora de Ahorro</span>
+                            <h2 class="section-title">¿Cuánto cuesta tu tiempo?</h2>
+                            <p class="section-desc">
+                                Configura tus valores operativos para ver cuánto dinero y tiempo liberas mensualmente al derivar tus procesos repetitivos a flujos de trabajo autónomos.
+                            </p>
+                            
+                            <div class="roi-inputs glass-card">
+                                <div class="calculator-group">
+                                    <div class="slider-header">
+                                        <label for="hours-slider" class="slider-label">Horas manuales semanales (por empleado)</label>
+                                        <span class="slider-value" id="hours-display">15 horas</span>
+                                    </div>
+                                    <input type="range" id="hours-slider" class="slider-input" min="5" max="40" value="15" aria-valuemin="5" aria-valuemax="40" aria-valuenow="15">
+                                </div>
+                                
+                                <div class="calculator-group">
+                                    <div class="slider-header">
+                                        <label for="rate-slider" class="slider-label">Costo por hora de trabajo (USD)</label>
+                                        <span class="slider-value" id="rate-display">25 USD</span>
+                                    </div>
+                                    <input type="range" id="rate-slider" class="slider-input" min="10" max="100" value="25" aria-valuemin="10" aria-valuemax="100" aria-valuenow="25">
+                                </div>
+
+                                <div class="calculator-group">
+                                    <div class="slider-header">
+                                        <label for="employees-slider" class="slider-label">Cantidad de empleados afectados</label>
+                                        <span class="slider-value" id="employees-display">3 personas</span>
+                                    </div>
+                                    <input type="range" id="employees-slider" class="slider-input" min="1" max="25" value="3" aria-valuemin="1" aria-valuemax="25" aria-valuenow="3">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="roi-results">
+                            <div class="result-card highlight">
+                                <h4>Ahorro Mensual Estimado</h4>
+                                <div class="result-value" id="monthly-savings">$4,500</div>
+                                <p class="result-desc">Dinero recuperado que puedes reinvertir en el crecimiento de tu negocio.</p>
+                            </div>
+                            
+                            <div class="result-card">
+                                <h4>Horas Anuales Liberadas</h4>
+                                <div class="result-value" id="yearly-hours">2,160 hrs</div>
+                                <p class="result-desc">Equivalente a más de 270 jornadas laborales de pura productividad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contacto" class="scroll-section">
+                <div class="container">
+                    <div class="contact-card glass-card">
+                        <div style="text-align: center; max-width: 500px; margin: 0 auto 30px auto;">
+                            <span class="section-tag">Da el Primer Paso</span>
+                            <h2 class="section-title">Optimiza tu negocio hoy</h2>
+                            <p class="section-desc">
+                                Escríbenos para agendar una consultoría gratuita de 30 minutos y recibir un mapa de automatización personalizado.
+                            </p>
+                        </div>
+                        
+                        <form class="contact-form" id="consulting-form" novalidate>
+                            <div class="form-group">
+                                <label for="form-name">Nombre completo</label>
+                                <input type="text" id="form-name" class="form-input" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-email">Correo corporativo</label>
+                                <input type="email" id="form-email" class="form-input" placeholder="Ej. juan@empresa.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-company">Empresa / Sitio web</label>
+                                <input type="text" id="form-company" class="form-input" placeholder="Ej. Empresa SA" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-size">Tamaño del equipo</label>
+                                <input type="text" id="form-size" class="form-input" placeholder="Ej. 10 - 50 personas">
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="form-message">¿Qué procesos repetitivos te gustaría automatizar?</label>
+                                <textarea id="form-message" class="form-input" placeholder="Describe brevemente tus cuellos de botella operativos..." required></textarea>
+                            </div>
+                            
+                            <div class="form-status" id="form-status-message"></div>
+                            
+                            <div class="form-group full-width contact-submit">
+                                <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width: 100%;">Solicitar Consultoría Gratuita</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div>
+                        <a href="#hero" class="logo" style="margin-bottom: 12px; display: inline-flex;">
+                            <img src="logo.png" alt="CeroTraba" class="logo-img">
+                        </a>
+                        <p style="max-width: 320px; font-size: 14px; font-weight: 300;">
+                            Llevamos tus operaciones al siguiente nivel eliminando las trabas con Inteligencia Artificial.
+                        </p>
+                    </div>
+                    
+                    <div class="footer-socials">
+                        <a href="#" aria-label="LinkedIn">LN</a>
+                        <a href="#" aria-label="Twitter / X">TW</a>
+                        <a href="#" aria-label="GitHub">GH</a>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Cerotraba. Todos los derechos reservados.</p>
+                    <div class="footer-legal">
+                        <a href="#">Privacidad</a>
+                        <a href="#">Términos</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts setup with import map -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <!-- Main JS file -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
