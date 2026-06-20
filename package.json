@@ -1,0 +1,23 @@
+{
+  "name": "cerotraba-web",
+  "version": "1.0.0",
+  "description": "Sitio web interactivo 3D para Cerotraba - Agencia de Automatización con IA",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "threejs",
+    "webgl",
+    "ia",
+    "automation",
+    "glassmorphism"
+  ],
+  "author": "Cerotraba",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
