@@ -4,48 +4,761 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Términos y Condiciones | Cerotraba</title>
-    <meta name="description" content="Términos y Condiciones de uso del sitio web y los servicios de Cerotraba.">
+    <meta name="description" content="Términos y Condiciones de uso de Cerotraba. Conoce las normas que rigen el uso de nuestro sitio web, simulador de IA, calculadora de ROI y servicios de automatización.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Términos y Condiciones | Cerotraba">
+    <meta property="og:description" content="Normas que rigen el uso del sitio web y los servicios de Cerotraba.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ── Terms-page specific styles ── */
+        .legal-hero {
+            min-height: 38vh;
+            display: flex;
+            align-items: flex-end;
+            padding: 120px 0 60px;
+            background: linear-gradient(180deg, rgba(6,182,212,0.05) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .legal-hero .badge-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .legal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: rgba(6,182,212,0.10);
+            border: 1px solid rgba(6,182,212,0.28);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #67e8f9;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+        }
+
+        .legal-updated {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .legal-hero h1 {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(32px, 5vw, 60px);
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .legal-hero p {
+            max-width: 660px;
+            color: var(--muted);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* ── Layout ── */
+        .legal-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 60px;
+            padding: 80px 0 120px;
+            align-items: start;
+        }
+
+        /* ── Sticky TOC ── */
+        .legal-toc {
+            position: sticky;
+            top: 100px;
+        }
+
+        .toc-title {
+            font-family: var(--font-heading);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 16px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .toc-list a {
+            display: block;
+            font-size: 13px;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 7px 12px;
+            border-radius: 8px;
+            border-left: 2px solid transparent;
+            transition: all 0.25s ease;
+            line-height: 1.4;
+        }
+
+        .toc-list a:hover,
+        .toc-list a.toc-active {
+            color: var(--fg);
+            background: rgba(6,182,212,0.08);
+            border-left-color: var(--accent-cyan);
+        }
+
+        /* ── Article body ── */
+        .legal-article {
+            min-width: 0;
+        }
+
+        .legal-section {
+            margin-bottom: 64px;
+            scroll-margin-top: 100px;
+        }
+
+        .legal-section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .section-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(6,182,212,0.10);
+            border: 1px solid rgba(6,182,212,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 15px;
+            color: #67e8f9;
+            flex-shrink: 0;
+        }
+
+        .legal-section h2 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: clamp(20px, 2.5vw, 26px);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .legal-section p {
+            color: var(--muted);
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .legal-section p:last-child { margin-bottom: 0; }
+
+        .legal-section p strong {
+            color: var(--fg);
+            font-weight: 600;
+        }
+
+        /* ── Bullet list ── */
+        .purpose-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .purpose-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--muted);
+            font-weight: 300;
+            line-height: 1.65;
+        }
+
+        .purpose-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            flex-shrink: 0;
+            margin-top: 8px;
+        }
+
+        /* ── Feature cards (for tools / prohibition items) ── */
+        .feature-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .feature-card {
+            background: rgba(15,23,42,0.5);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px;
+            padding: 20px 22px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(6,182,212,0.25);
+            background: rgba(6,182,212,0.04);
+        }
+
+        .feature-card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(6,182,212,0.10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .feature-card-body strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--fg);
+            margin-bottom: 5px;
+            font-family: var(--font-heading);
+        }
+
+        .feature-card-body span {
+            font-size: 13px;
+            color: var(--muted);
+            font-weight: 300;
+            line-height: 1.65;
+        }
+
+        /* ── Warning / alert box ── */
+        .alert-box {
+            border-radius: 16px;
+            padding: 22px 26px;
+            margin-top: 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .alert-box.warning {
+            background: linear-gradient(135deg, rgba(249,115,22,0.07) 0%, rgba(15,23,42,0.6) 100%);
+            border: 1px solid rgba(249,115,22,0.2);
+        }
+
+        .alert-box.info {
+            background: linear-gradient(135deg, rgba(6,182,212,0.07) 0%, rgba(15,23,42,0.6) 100%);
+            border: 1px solid rgba(6,182,212,0.18);
+        }
+
+        .alert-box-icon {
+            font-size: 22px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .alert-box p {
+            margin: 0 !important;
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--muted);
+        }
+
+        .alert-box.warning strong { color: var(--accent-orange) !important; }
+        .alert-box.info    strong { color: #67e8f9 !important; }
+
+        /* ── IP grid ── */
+        .ip-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .ip-card {
+            background: rgba(15,23,42,0.5);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .ip-card:hover {
+            border-color: rgba(6,182,212,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .ip-card-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .ip-card strong {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--fg);
+            font-family: var(--font-heading);
+        }
+
+        /* ── Contract highlight ── */
+        .contract-box {
+            background: linear-gradient(135deg, rgba(124,58,237,0.08) 0%, rgba(6,182,212,0.05) 100%);
+            border: 1px solid rgba(124,58,237,0.2);
+            border-radius: 16px;
+            padding: 26px 30px;
+            margin-top: 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .contract-box p {
+            margin: 0 !important;
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--muted);
+        }
+
+        .contract-box strong { color: #a78bfa !important; }
+
+        /* ── Contact CTA banner ── */
+        .contact-banner {
+            background: linear-gradient(135deg, rgba(6,182,212,0.10) 0%, rgba(124,58,237,0.06) 100%);
+            border: 1px solid rgba(6,182,212,0.2);
+            border-radius: 20px;
+            padding: 36px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 48px;
+        }
+
+        .contact-banner-text h3 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .contact-banner-text p {
+            font-size: 14px;
+            color: var(--muted);
+            font-weight: 300;
+            margin: 0 !important;
+        }
+
+        .contact-banner a { white-space: nowrap; }
+
+        /* ── Divider ── */
+        .legal-divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin: 0 0 64px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .legal-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 0 80px;
+            }
+
+            .legal-toc {
+                position: static;
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .toc-title { margin-bottom: 0; }
+
+            .toc-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+
+            .toc-list a {
+                border-left: none;
+                border-bottom: 2px solid transparent;
+                border-radius: 6px;
+                padding: 5px 10px;
+            }
+
+            .toc-list a:hover,
+            .toc-list a.toc-active {
+                border-left-color: transparent;
+                border-bottom-color: var(--accent-cyan);
+            }
+
+            .ip-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .ip-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-    <header class="site-header">
-        <nav class="navbar">
-            <a href="index.html" class="logo">Cerotraba</a>
-            <ul class="nav-links">
-                <li><a href="index.html#hero">Inicio</a></li>
-                <li><a href="index.html#services">Servicios</a></li>
-                <li><a href="index.html#contact">Contacto</a></li>
-                <li><a href="privacy.html">Política de Privacidad</a></li>
-                <li><a href="terms.html">Términos y Condiciones</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="content">
-        <section class="terms-section">
-            <h1>Términos y Condiciones</h1>
-            <p>Bienvenido a <strong>Cerotraba</strong>. Al acceder y usar nuestro sitio web y servicios, usted acepta los siguientes términos y condiciones.</p>
-            <h2>1. Uso del Sitio</h2>
-            <p>El contenido de este sitio está protegido por derechos de autor y marcas registradas. No está permitido copiar, distribuir, o modificar sin autorización previa.</p>
-            <h2>2. Servicios</h2>
-            <p>Cerotraba ofrece soluciones de automatización con IA. Los detalles de cada servicio se describen en la sección "Servicios". Los precios, plazos y alcance pueden variar y se confirmarán en cada proyecto mediante contrato.</p>
-            <h2>3. Responsabilidad</h2>
-            <p>Nos esforzamos por proporcionar información precisa, pero no garantizamos la ausencia de errores. Cerotraba no será responsable por pérdidas directas o indirectas derivadas del uso del sitio o de los servicios.</p>
-            <h2>4. Enlaces a Terceros</h2>
-            <p>El sitio puede contener enlaces a sitios externos. No controlamos el contenido de esos sitios y no asumimos responsabilidad por su precisión o prácticas.</p>
-            <h2>5. Modificaciones</h2>
-            <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Las versiones actualizadas se publicarán en esta página y entrarán en vigor inmediatamente.</p>
-            <h2>6. Ley Aplicable</h2>
-            <p>Estos términos se rigen por las leyes de la República Argentina. Cualquier disputa será sometida a los tribunales competentes de la Ciudad Autónoma de Buenos Aires.</p>
-            <h2>7. Contacto</h2>
-            <p>Para cualquier consulta relacionada con estos términos, contáctenos en <a href="mailto:legal@cerotraba.com">legal@cerotraba.com</a>.</p>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <p>&copy; 2026 Cerotraba. Todos los derechos reservados.</p>
-        <nav class="footer-links">
-            <a href="privacy.html">Política de Privacidad</a> |
-            <a href="terms.html">Términos y Condiciones</a>
-        </nav>
-    </footer>
+    <!-- Static gradient background so header glass works -->
+    <div id="canvas-container" aria-hidden="true" style="background: radial-gradient(ellipse at 80% 15%, rgba(6,182,212,0.10) 0%, transparent 55%), radial-gradient(ellipse at 15% 85%, rgba(124,58,237,0.08) 0%, transparent 55%);"></div>
+
+    <div class="app-content">
+        <!-- ── HEADER ── -->
+        <header id="main-header">
+            <div class="container">
+                <a href="index.html" class="logo" id="logo-brand">
+                    <img src="logo.png" alt="CeroTraba" class="logo-img">
+                </a>
+
+                <nav class="nav-links" id="nav-menu">
+                    <a href="index.html#hero"        class="nav-link" id="link-hero">Inicio</a>
+                    <a href="index.html#servicios"   class="nav-link" id="link-servicios">Servicios</a>
+                    <a href="index.html#simulador"   class="nav-link" id="link-simulador">Simulador</a>
+                    <a href="index.html#calculadora" class="nav-link" id="link-calculadora">Calculadora ROI</a>
+                    <a href="index.html#contacto"    class="nav-link" id="link-contacto">Contacto</a>
+                </nav>
+
+                <div class="nav-cta">
+                    <a href="index.html#contacto" class="btn btn-primary" id="header-cta-btn">Agendar Demo</a>
+                </div>
+
+                <button class="hamburger" id="hamburger-toggle"
+                    aria-label="Abrir menú de navegación"
+                    aria-controls="nav-menu"
+                    aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- ── HERO BANNER ── -->
+            <section class="legal-hero" aria-labelledby="terms-title">
+                <div class="container">
+                    <div class="badge-row">
+                        <span class="legal-badge">📄 Términos Legales</span>
+                        <span class="legal-updated">Última actualización: Junio 2026</span>
+                    </div>
+                    <h1 id="terms-title">Términos y<br><span class="accent-text">Condiciones</span></h1>
+                    <p>
+                        Bienvenido a Cerotraba. Al acceder y utilizar este sitio web
+                        (<strong style="color:var(--fg);">cerotraba.vercel.app</strong>), aceptas
+                        cumplir y estar sujeto a los siguientes Términos y Condiciones. Si no estás de
+                        acuerdo con alguna parte de estos términos, te solicitamos que no utilices
+                        nuestros servicios ni navegues por la plataforma.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ── BODY: TOC + Article ── -->
+            <div class="container">
+                <div class="legal-layout">
+
+                    <!-- Sticky Table of Contents -->
+                    <aside class="legal-toc" aria-label="Tabla de contenidos">
+                        <p class="toc-title">Contenido</p>
+                        <ul class="toc-list" id="toc-list">
+                            <li><a href="#sec-1" id="toc-1">1. Uso del sitio y herramientas</a></li>
+                            <li><a href="#sec-2" id="toc-2">2. Propiedad intelectual</a></li>
+                            <li><a href="#sec-3" id="toc-3">3. Limitación de responsabilidad</a></li>
+                            <li><a href="#sec-4" id="toc-4">4. Propuestas y consultorías</a></li>
+                            <li><a href="#sec-5" id="toc-5">5. Modificaciones</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Article -->
+                    <article class="legal-article">
+
+                        <!-- ── 1. Uso del Sitio ── -->
+                        <section class="legal-section" id="sec-1" aria-labelledby="heading-1">
+                            <div class="legal-section-header">
+                                <div class="section-number" aria-hidden="true">1</div>
+                                <h2 id="heading-1">Uso del Sitio Web y Herramientas Interactivas</h2>
+                            </div>
+                            <p>
+                                El contenido de este sitio, incluyendo el <strong>Simulador de Flujos de IA</strong>
+                                y la <strong>Calculadora de ROI</strong>, se ofrece exclusivamente con fines
+                                informativos, educativos y demostrativos.
+                            </p>
+
+                            <div class="feature-cards">
+                                <div class="feature-card">
+                                    <div class="feature-card-icon" aria-hidden="true">📊</div>
+                                    <div class="feature-card-body">
+                                        <strong>Estimaciones de la Calculadora</strong>
+                                        <span>Los resultados son estimaciones basadas en los parámetros ingresados por el usuario y no constituyen una garantía contractual de ahorro exacto. Siempre se recomienda una auditoría técnica personalizada.</span>
+                                    </div>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-card-icon" aria-hidden="true">🚫</div>
+                                    <div class="feature-card-body">
+                                        <strong>Uso Prohibido</strong>
+                                        <span>Queda prohibido utilizar el sitio web para introducir códigos maliciosos, realizar ataques de denegación de servicio o intentar vulnerar la infraestructura de la plataforma de cualquier forma.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="legal-divider">
+
+                        <!-- ── 2. Propiedad Intelectual ── -->
+                        <section class="legal-section" id="sec-2" aria-labelledby="heading-2">
+                            <div class="legal-section-header">
+                                <div class="section-number" aria-hidden="true">2</div>
+                                <h2 id="heading-2">Propiedad Intelectual</h2>
+                            </div>
+                            <p>
+                                Todos los materiales presentados en este sitio son propiedad exclusiva de
+                                Cerotraba o cuentan con las licencias correspondientes. Esto incluye, sin
+                                limitarse a:
+                            </p>
+
+                            <div class="ip-grid">
+                                <div class="ip-card">
+                                    <div class="ip-card-icon" aria-hidden="true">🧊</div>
+                                    <strong>Diseño 3D & Visual</strong>
+                                </div>
+                                <div class="ip-card">
+                                    <div class="ip-card-icon" aria-hidden="true">⚙️</div>
+                                    <strong>Lógica del Simulador</strong>
+                                </div>
+                                <div class="ip-card">
+                                    <div class="ip-card-icon" aria-hidden="true">🎨</div>
+                                    <strong>Logotipos & Diseño</strong>
+                                </div>
+                                <div class="ip-card">
+                                    <div class="ip-card-icon" aria-hidden="true">📝</div>
+                                    <strong>Textos & Contenidos</strong>
+                                </div>
+                                <div class="ip-card">
+                                    <div class="ip-card-icon" aria-hidden="true">🧩</div>
+                                    <strong>Componentes Interactivos</strong>
+                                </div>
+                                <div class="ip-card">
+                                    <div class="ip-card-icon" aria-hidden="true">💻</div>
+                                    <strong>Código Fuente</strong>
+                                </div>
+                            </div>
+
+                            <div class="alert-box warning" style="margin-top:20px;">
+                                <div class="alert-box-icon" aria-hidden="true">⚠️</div>
+                                <p>
+                                    <strong>Reproducción no autorizada:</strong> Queda prohibida la reproducción,
+                                    distribución o modificación comercial de cualquier material de este sitio sin la
+                                    autorización expresa por escrito de la Agencia.
+                                </p>
+                            </div>
+                        </section>
+
+                        <hr class="legal-divider">
+
+                        <!-- ── 3. Limitación de Responsabilidad ── -->
+                        <section class="legal-section" id="sec-3" aria-labelledby="heading-3">
+                            <div class="legal-section-header">
+                                <div class="section-number" aria-hidden="true">3</div>
+                                <h2 id="heading-3">Limitación de Responsabilidad</h2>
+                            </div>
+                            <p>
+                                Cerotraba realiza sus mayores esfuerzos para garantizar la disponibilidad
+                                continua del sitio web y la precisión de sus herramientas. Sin embargo,
+                                no nos hacemos responsables por:
+                            </p>
+
+                            <ul class="purpose-list">
+                                <li>
+                                    Interrupciones temporales del servicio debido a fallas técnicas ajenas a
+                                    nuestro control (ej. caídas de servidores de hosting o plataformas de
+                                    despliegue como Vercel).
+                                </li>
+                                <li>
+                                    Daños o decisiones comerciales tomadas con base en las estimaciones del
+                                    simulador o la calculadora de ROI antes de una auditoría técnica formal
+                                    y personalizada.
+                                </li>
+                            </ul>
+
+                            <div class="alert-box info" style="margin-top:20px;">
+                                <div class="alert-box-icon" aria-hidden="true">💡</div>
+                                <p>
+                                    <strong>Recomendación:</strong> Para decisiones de inversión en automatización,
+                                    te recomendamos agendar una consultoría gratuita de 30 minutos donde realizamos
+                                    un análisis real y personalizado de tus procesos.
+                                </p>
+                            </div>
+                        </section>
+
+                        <hr class="legal-divider">
+
+                        <!-- ── 4. Propuestas y Consultorías ── -->
+                        <section class="legal-section" id="sec-4" aria-labelledby="heading-4">
+                            <div class="legal-section-header">
+                                <div class="section-number" aria-hidden="true">4</div>
+                                <h2 id="heading-4">Propuestas y Consultorías</h2>
+                            </div>
+                            <p>
+                                La solicitud de una consultoría gratuita a través de nuestro formulario
+                                no genera una obligación contractual de prestación de servicios por parte
+                                de Cerotraba.
+                            </p>
+
+                            <div class="contract-box">
+                                <div style="font-size:24px; flex-shrink:0; margin-top:2px;" aria-hidden="true">📋</div>
+                                <p>
+                                    Los términos específicos de los proyectos de desarrollo de software,
+                                    agentes de IA e integraciones de flujos autónomos se regirán bajo un
+                                    <strong>Contrato de Prestación de Servicios</strong> independiente
+                                    firmado por ambas partes, el cual prevalecerá sobre cualquier
+                                    comunicación o estimación previa presentada en este sitio.
+                                </p>
+                            </div>
+                        </section>
+
+                        <hr class="legal-divider">
+
+                        <!-- ── 5. Modificaciones ── -->
+                        <section class="legal-section" id="sec-5" aria-labelledby="heading-5">
+                            <div class="legal-section-header">
+                                <div class="section-number" aria-hidden="true">5</div>
+                                <h2 id="heading-5">Modificaciones de los Términos</h2>
+                            </div>
+                            <p>
+                                Nos reservamos el derecho de modificar estos Términos y Condiciones en
+                                cualquier momento para adaptarlos a novedades legislativas o cambios en
+                                nuestros servicios.
+                            </p>
+                            <p>
+                                Te recomendamos revisar esta página periódicamente. El uso continuado del
+                                sitio web tras la publicación de cambios constituye la aceptación de los
+                                nuevos términos.
+                            </p>
+                        </section>
+
+                        <!-- ── Final CTA ── -->
+                        <div class="contact-banner">
+                            <div class="contact-banner-text">
+                                <h3>¿Tienes alguna duda sobre estos términos?</h3>
+                                <p>Nuestro equipo está disponible para aclarar cualquier punto antes de iniciar una colaboración.</p>
+                            </div>
+                            <a href="index.html#contacto" class="btn btn-primary" id="terms-contact-btn">
+                                Hablar con el equipo
+                            </a>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- ── FOOTER ── -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div>
+                        <a href="index.html" class="logo" style="margin-bottom: 12px; display: inline-flex;">
+                            <img src="logo.png" alt="CeroTraba" class="logo-img">
+                        </a>
+                        <p style="max-width: 320px; font-size: 14px; font-weight: 300;">
+                            Llevamos tus operaciones al siguiente nivel eliminando las trabas con Inteligencia Artificial.
+                        </p>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="LinkedIn">LN</a>
+                        <a href="#" aria-label="Twitter / X">TW</a>
+                        <a href="#" aria-label="GitHub">GH</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Cerotraba. Todos los derechos reservados.</p>
+                    <nav class="footer-legal" aria-label="Legal">
+                        <a href="privacy.html">Privacidad</a>
+                        <a href="terms.html" aria-current="page">Términos</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Minimal JS: header scroll + hamburger + TOC active state -->
+    <script>
+        // ── Header scroll effect ──
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 20);
+        }, { passive: true });
+
+        // ── Mobile hamburger ──
+        const hamburger = document.getElementById('hamburger-toggle');
+        const navMenu   = document.getElementById('nav-menu');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // ── Sticky TOC: highlight active section ──
+        const sections = document.querySelectorAll('.legal-section');
+        const tocLinks  = document.querySelectorAll('.toc-list a');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    tocLinks.forEach(a => {
+                        a.classList.toggle('toc-active', a.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        sections.forEach(s => observer.observe(s));
+    </script>
 </body>
 </html>

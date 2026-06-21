@@ -4,56 +4,718 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad | Cerotraba</title>
-    <meta name="description" content="Política de Privacidad de Cerotraba, agencia de automatización con IA.">
+    <meta name="description" content="Política de Privacidad de Cerotraba. Conoce cómo recopilamos, usamos y protegemos tus datos personales y empresariales en nuestra plataforma de automatización con IA.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Política de Privacidad | Cerotraba">
+    <meta property="og:description" content="Conoce cómo Cerotraba recopila, usa y protege tus datos personales.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ── Privacy-page specific overrides ── */
+        .legal-hero {
+            min-height: 38vh;
+            display: flex;
+            align-items: flex-end;
+            padding: 120px 0 60px;
+            background: linear-gradient(180deg, rgba(124,58,237,0.06) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .legal-hero .badge-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .legal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: rgba(124,58,237,0.12);
+            border: 1px solid rgba(124,58,237,0.3);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #a78bfa;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+        }
+
+        .legal-updated {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .legal-hero h1 {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(32px, 5vw, 60px);
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .legal-hero p {
+            max-width: 640px;
+            color: var(--muted);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* ── Layout ── */
+        .legal-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 60px;
+            padding: 80px 0 120px;
+            align-items: start;
+        }
+
+        /* ── Sticky TOC sidebar ── */
+        .legal-toc {
+            position: sticky;
+            top: 100px;
+        }
+
+        .toc-title {
+            font-family: var(--font-heading);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent-purple);
+            margin-bottom: 16px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .toc-list a {
+            display: block;
+            font-size: 13px;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 7px 12px;
+            border-radius: 8px;
+            border-left: 2px solid transparent;
+            transition: all 0.25s ease;
+            line-height: 1.4;
+        }
+
+        .toc-list a:hover,
+        .toc-list a.toc-active {
+            color: var(--fg);
+            background: rgba(124,58,237,0.08);
+            border-left-color: var(--accent-purple);
+        }
+
+        /* ── Article body ── */
+        .legal-article {
+            min-width: 0;
+        }
+
+        .legal-section {
+            margin-bottom: 64px;
+            scroll-margin-top: 100px;
+        }
+
+        .legal-section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .section-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(124,58,237,0.12);
+            border: 1px solid rgba(124,58,237,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 15px;
+            color: #a78bfa;
+            flex-shrink: 0;
+        }
+
+        .legal-section h2 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: clamp(20px, 2.5vw, 26px);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .legal-section p {
+            color: var(--muted);
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .legal-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section p strong {
+            color: var(--fg);
+            font-weight: 600;
+        }
+
+        /* ── Info cards (data items list) ── */
+        .info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .info-card {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px;
+            padding: 18px 22px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .info-card:hover {
+            border-color: rgba(124,58,237,0.25);
+            background: rgba(124,58,237,0.04);
+        }
+
+        .info-card-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(124,58,237,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .info-card-body strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--fg);
+            margin-bottom: 4px;
+            font-family: var(--font-heading);
+        }
+
+        .info-card-body span {
+            font-size: 13px;
+            color: var(--muted);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* ── Use purpose list ── */
+        .purpose-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .purpose-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--muted);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .purpose-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-purple);
+            flex-shrink: 0;
+            margin-top: 8px;
+        }
+
+        /* ── Highlight box ── */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(16,185,129,0.06) 0%, rgba(6,182,212,0.04) 100%);
+            border: 1px solid rgba(16,185,129,0.2);
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-top: 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .highlight-box-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .highlight-box p {
+            margin: 0 !important;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .highlight-box strong {
+            color: var(--accent-emerald) !important;
+        }
+
+        /* ── ARCO rights grid ── */
+        .arco-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .arco-card {
+            background: rgba(15,23,42,0.5);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .arco-card:hover {
+            border-color: rgba(124,58,237,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .arco-letter {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 30%, var(--accent-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .arco-card strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--fg);
+            margin-bottom: 4px;
+        }
+
+        .arco-card p {
+            font-size: 12px;
+            color: var(--muted);
+            font-weight: 300;
+            line-height: 1.5;
+            margin: 0 !important;
+        }
+
+        /* ── Contact CTA banner ── */
+        .contact-banner {
+            background: linear-gradient(135deg, rgba(124,58,237,0.12) 0%, rgba(6,182,212,0.06) 100%);
+            border: 1px solid rgba(124,58,237,0.2);
+            border-radius: 20px;
+            padding: 36px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .contact-banner-text h3 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .contact-banner-text p {
+            font-size: 14px;
+            color: var(--muted);
+            font-weight: 300;
+            margin: 0 !important;
+        }
+
+        .contact-banner a {
+            white-space: nowrap;
+        }
+
+        /* ── Divider ── */
+        .legal-divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin: 0 0 64px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .legal-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 0 80px;
+            }
+            .legal-toc {
+                position: static;
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            .toc-title { margin-bottom: 0; }
+            .toc-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+            .toc-list a {
+                border-left: none;
+                border-bottom: 2px solid transparent;
+                border-radius: 6px;
+                padding: 5px 10px;
+            }
+            .toc-list a:hover,
+            .toc-list a.toc-active {
+                border-left-color: transparent;
+                border-bottom-color: var(--accent-purple);
+            }
+            .arco-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .arco-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="site-header">
-        <nav class="navbar">
-            <a href="index.html" class="logo">Cerotraba</a>
-            <ul class="nav-links">
-                <li><a href="index.html#hero">Inicio</a></li>
-                <li><a href="index.html#services">Servicios</a></li>
-                <li><a href="index.html#contact">Contacto</a></li>
-                <li><a href="privacy.html">Política de Privacidad</a></li>
-                <li><a href="terms.html">Términos y Condiciones</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="content">
-        <section class="privacy-section">
-            <h1>Política de Privacidad</h1>
-            <p>En Cerotraba respetamos su privacidad y protegemos los datos que recopilamos. Esta política describe cómo manejamos la información personal que obtenemos a través de nuestro sitio web y servicios.</p>
-            <h2>Información que recopilamos</h2>
-            <ul>
-                <li>Datos de contacto (nombre, correo electrónico, teléfono) cuando usted completa formularios.</li>
-                <li>Datos de uso del sitio mediante cookies y tecnologías similares.</li>
-                <li>Información técnica del navegador y del dispositivo.</li>
-            </ul>
-            <h2>Uso de la información</h2>
-            <p>Utilizamos la información para:</p>
-            <ul>
-                <li>Responder a sus consultas y proporcionar soporte.</li>
-                <li>Mejorar y personalizar la experiencia de usuario.</li>
-                <li>Enviar boletines informativos si usted ha optado por recibirlos.</li>
-                <li>Cumplir con obligaciones legales y de seguridad.</li>
-            </ul>
-            <h2>Compartir la información</h2>
-            <p>No vendemos ni alquilamos su información personal a terceros. Podemos compartir datos con proveedores de servicios que nos ayuden a operar el sitio, siempre bajo estrictos acuerdos de confidencialidad.</p>
-            <h2>Sus derechos</h2>
-            <p>Usted puede solicitar acceso, corrección o eliminación de sus datos en cualquier momento contactándonos a <a href="mailto:privacy@cerotraba.com">privacy@cerotraba.com</a>.</p>
-            <h2>Seguridad</h2>
-            <p>Implementamos medidas técnicas y organizativas razonables para proteger su información contra accesos no autorizados.</p>
-            <h2>Cambios en la política</h2>
-            <p>Actualizamos esta política periódicamente. La versión más reciente siempre estará disponible en esta página.</p>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <p>&copy; 2026 Cerotraba. Todos los derechos reservados.</p>
-        <nav class="footer-links">
-            <a href="privacy.html">Política de Privacidad</a> |
-            <a href="terms.html">Términos y Condiciones</a>
-        </nav>
-    </footer>
+    <!-- 3D canvas placeholder so header glassmorphism works correctly -->
+    <div id="canvas-container" aria-hidden="true" style="background: radial-gradient(ellipse at 20% 20%, rgba(124,58,237,0.12) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(6,182,212,0.08) 0%, transparent 60%);"></div>
+
+    <div class="app-content">
+        <!-- HEADER -->
+        <header id="main-header">
+            <div class="container">
+                <a href="index.html" class="logo" id="logo-brand">
+                    <img src="logo.png" alt="CeroTraba" class="logo-img">
+                </a>
+
+                <nav class="nav-links" id="nav-menu">
+                    <a href="index.html#hero"        class="nav-link" id="link-hero">Inicio</a>
+                    <a href="index.html#servicios"   class="nav-link" id="link-servicios">Servicios</a>
+                    <a href="index.html#simulador"   class="nav-link" id="link-simulador">Simulador</a>
+                    <a href="index.html#calculadora" class="nav-link" id="link-calculadora">Calculadora ROI</a>
+                    <a href="index.html#contacto"    class="nav-link" id="link-contacto">Contacto</a>
+                </nav>
+
+                <div class="nav-cta">
+                    <a href="index.html#contacto" class="btn btn-primary" id="header-cta-btn">Agendar Demo</a>
+                </div>
+
+                <button class="hamburger" id="hamburger-toggle"
+                    aria-label="Abrir menú de navegación"
+                    aria-controls="nav-menu"
+                    aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- HERO BANNER -->
+            <section class="legal-hero" aria-labelledby="privacy-title">
+                <div class="container">
+                    <div class="badge-row">
+                        <span class="legal-badge">🔒 Privacidad & Seguridad</span>
+                        <span class="legal-updated">Última actualización: Junio 2026</span>
+                    </div>
+                    <h1 id="privacy-title">Política de<br><span class="accent-text">Privacidad</span></h1>
+                    <p>
+                        En Cerotraba nos tomamos muy en serio la seguridad y la privacidad de tus datos.
+                        Esta política describe cómo recopilamos, utilizamos, almacenamos y protegemos la información
+                        que nos proporcionas a través de <strong style="color:var(--fg);">cerotraba.vercel.app</strong>
+                        y en el desarrollo de nuestras consultorías y servicios de automatización.
+                    </p>
+                </div>
+            </section>
+
+            <!-- BODY: TOC + Article -->
+            <div class="container">
+                <div class="legal-layout">
+
+                    <!-- Sticky Table of Contents -->
+                    <aside class="legal-toc" aria-label="Tabla de contenidos">
+                        <p class="toc-title">Contenido</p>
+                        <ul class="toc-list" id="toc-list">
+                            <li><a href="#sec-1" id="toc-1">1. Información que recopilamos</a></li>
+                            <li><a href="#sec-2" id="toc-2">2. Uso de la información</a></li>
+                            <li><a href="#sec-3" id="toc-3">3. Almacenamiento y seguridad</a></li>
+                            <li><a href="#sec-4" id="toc-4">4. Transferencia a terceros</a></li>
+                            <li><a href="#sec-5" id="toc-5">5. Tus derechos (ARCO)</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Article -->
+                    <article class="legal-article">
+
+                        <!-- ── 1. Información ── -->
+                        <section class="legal-section" id="sec-1" aria-labelledby="heading-1">
+                            <div class="legal-section-header">
+                                <div class="section-number" aria-hidden="true">1</div>
+                                <h2 id="heading-1">Información que Recopilamos</h2>
+                            </div>
+                            <p>
+                                Para ofrecerte una experiencia óptima y personalizar cada consultoría, recopilamos
+                                la siguiente información a través de nuestro formulario de contacto y calculadora de ROI:
+                            </p>
+
+                            <div class="info-cards">
+                                <div class="info-card">
+                                    <div class="info-card-icon" aria-hidden="true">👤</div>
+                                    <div class="info-card-body">
+                                        <strong>Datos de Identificación</strong>
+                                        <span>Nombre completo del solicitante o representante de la empresa.</span>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-card-icon" aria-hidden="true">📬</div>
+                                    <div class="info-card-body">
+                                        <strong>Datos de Contacto</strong>
+                                        <span>Correo electrónico corporativo y número de teléfono/WhatsApp (si aplica).</span>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-card-icon" aria-hidden="true">🏢</div>
+                                    <div class="info-card-body">
+                                        <strong>Datos Empresariales</strong>
+                                        <span>Nombre de tu empresa o sitio web, tamaño del equipo y descripción de los procesos operativos que deseas automatizar.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="legal-divider">
+
+                        <!-- ── 2. Uso ── -->
+                        <section class="legal-section" id="sec-2" aria-labelledby="heading-2">
+                            <div class="legal-section-header">
+                                <div class="section-number" aria-hidden="true">2</div>
+                                <h2 id="heading-2">Uso de la Información</h2>
+                            </div>
+                            <p>Los datos recopilados se utilizan <strong>estrictamente</strong> para los siguientes fines:</p>
+
+                            <ul class="purpose-list">
+                                <li>Agendar, preparar y personalizar la consultoría gratuita de 30 minutos.</li>
+                                <li>Enviar el mapa de automatización personalizado y propuestas comerciales.</li>
+                                <li>Mejorar las funciones de nuestro simulador interactivo y calculadora de ROI.</li>
+                                <li>Mantener una comunicación fluida durante la ejecución de los proyectos.</li>
+                            </ul>
+                        </section>
+
+                        <hr class="legal-divider">
+
+                        <!-- ── 3. Almacenamiento ── -->
+                        <section class="legal-section" id="sec-3" aria-labelledby="heading-3">
+                            <div class="legal-section-header">
+                                <div class="section-number" aria-hidden="true">3</div>
+                                <h2 id="heading-3">Almacenamiento y Seguridad de los Datos</h2>
+                            </div>
+                            <p>
+                                Implementamos medidas de seguridad técnicas y organizativas robustas para proteger
+                                tus datos contra accesos no autorizados, pérdidas o alteraciones.
+                            </p>
+                            <p>
+                                <strong>Infraestructura Segura:</strong> La información se procesa y almacena
+                                utilizando conexiones encriptadas (SSL/HTTPS) y herramientas de CRM de primer
+                                nivel con altos estándares de cumplimiento.
+                            </p>
+
+                            <div class="highlight-box">
+                                <div class="highlight-box-icon" aria-hidden="true">🛡️</div>
+                                <p>
+                                    <strong>Filosofía de Cero Retención:</strong> En los flujos de automatización
+                                    e integraciones que diseñamos para nuestros clientes (ej. mediante n8n,
+                                    Webhooks o APIs de IA), promovemos prácticas de procesamiento <em>en tránsito</em>,
+                                    asegurando que los datos sensibles de tu negocio viajen de forma segura
+                                    directamente a tus bases de datos (HubSpot, Slack, ERPs) sin almacenarse
+                                    de manera persistente en nuestros servidores intermediarios.
+                                </p>
+                            </div>
+                        </section>
+
+                        <hr class="legal-divider">
+
+                        <!-- ── 4. Terceros ── -->
+                        <section class="legal-section" id="sec-4" aria-labelledby="heading-4">
+                            <div class="legal-section-header">
+                                <div class="section-number" aria-hidden="true">4</div>
+                                <h2 id="heading-4">Transferencia de Datos a Terceros</h2>
+                            </div>
+                            <p>
+                                Cerotraba <strong>no vende, alquila ni comparte</strong> tus datos personales con
+                                terceros con fines comerciales. Los datos solo se transfieren a proveedores de
+                                servicios de confianza necesarios para operar nuestra plataforma (como hosting y
+                                herramientas de automatización de correos), los cuales cumplen rigurosamente con
+                                sus respectivas normativas de privacidad.
+                            </p>
+                        </section>
+
+                        <hr class="legal-divider">
+
+                        <!-- ── 5. ARCO ── -->
+                        <section class="legal-section" id="sec-5" aria-labelledby="heading-5">
+                            <div class="legal-section-header">
+                                <div class="section-number" aria-hidden="true">5</div>
+                                <h2 id="heading-5">Tus Derechos (Derechos ARCO)</h2>
+                            </div>
+                            <p>
+                                Tienes derecho a acceder, rectificar, cancelar u oponerte al tratamiento de tus
+                                datos personales en cualquier momento:
+                            </p>
+
+                            <div class="arco-grid">
+                                <div class="arco-card">
+                                    <div class="arco-letter">A</div>
+                                    <strong>Acceso</strong>
+                                    <p>Solicita una copia completa de los datos que tenemos sobre ti.</p>
+                                </div>
+                                <div class="arco-card">
+                                    <div class="arco-letter">R</div>
+                                    <strong>Rectificación</strong>
+                                    <p>Corrige cualquier dato incorrecto o desactualizado en cualquier momento.</p>
+                                </div>
+                                <div class="arco-card">
+                                    <div class="arco-letter">C</div>
+                                    <strong>Cancelación</strong>
+                                    <p>Solicita la eliminación definitiva de tus datos de nuestros registros.</p>
+                                </div>
+                                <div class="arco-card">
+                                    <div class="arco-letter">O</div>
+                                    <strong>Oposición</strong>
+                                    <p>Oponte a que procesemos tus datos para un fin determinado.</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-banner" style="margin-top: 32px;">
+                                <div class="contact-banner-text">
+                                    <h3>¿Tienes alguna consulta o solicitud?</h3>
+                                    <p>Escríbenos directamente a nuestro canal oficial de soporte y te responderemos a la brevedad.</p>
+                                </div>
+                                <a href="mailto:privacidad@cerotraba.com" class="btn btn-primary" id="privacy-contact-btn">
+                                    Contactar Soporte
+                                </a>
+                            </div>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div>
+                        <a href="index.html" class="logo" style="margin-bottom: 12px; display: inline-flex;">
+                            <img src="logo.png" alt="CeroTraba" class="logo-img">
+                        </a>
+                        <p style="max-width: 320px; font-size: 14px; font-weight: 300;">
+                            Llevamos tus operaciones al siguiente nivel eliminando las trabas con Inteligencia Artificial.
+                        </p>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="LinkedIn">LN</a>
+                        <a href="#" aria-label="Twitter / X">TW</a>
+                        <a href="#" aria-label="GitHub">GH</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Cerotraba. Todos los derechos reservados.</p>
+                    <nav class="footer-legal" aria-label="Legal">
+                        <a href="privacy.html" aria-current="page">Privacidad</a>
+                        <a href="terms.html">Términos</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Minimal JS: header scroll + hamburger + TOC active state -->
+    <script>
+        // ── Header scroll effect ──
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 20);
+        }, { passive: true });
+
+        // ── Mobile hamburger ──
+        const hamburger = document.getElementById('hamburger-toggle');
+        const navMenu   = document.getElementById('nav-menu');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // ── Sticky TOC: highlight active section ──
+        const sections = document.querySelectorAll('.legal-section');
+        const tocLinks = document.querySelectorAll('.toc-list a');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    tocLinks.forEach(a => {
+                        a.classList.toggle('toc-active', a.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        sections.forEach(s => observer.observe(s));
+    </script>
 </body>
 </html>
