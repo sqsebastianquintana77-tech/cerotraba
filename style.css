@@ -1133,3 +1133,93 @@ footer {
         display: none;
     }
 }
+
+/* --- TECH STACK SLIDER --- */
+.tech-section {
+    min-height: unset;
+    padding: 40px 0 56px;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    background: linear-gradient(180deg, rgba(7,10,19,0.0) 0%, rgba(7,10,19,0.35) 100%);
+    overflow: hidden;
+}
+
+.tech-subtitle {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: 0.6;
+    margin-bottom: 28px;
+}
+
+.tech-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* fade edges */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 12%,
+        black 88%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 12%,
+        black 88%,
+        transparent 100%
+    );
+}
+
+.tech-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: tech-scroll 28s linear infinite;
+}
+
+.tech-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes tech-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.tech-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    color: var(--muted);
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    cursor: default;
+    letter-spacing: 0.01em;
+}
+
+.tech-logo:hover {
+    color: var(--fg);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.tech-logo .logo-icon {
+    font-size: 18px;
+    line-height: 1;
+}
