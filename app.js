@@ -294,9 +294,12 @@ function isMobile() {
 function updateActiveSection(sectionId) {
     const sectionIndexMap = {
         'hero': 0,
+        'tecnologias': 0,
         'servicios': 1,
         'simulador': 2,
         'calculadora': 3,
+        'testimonios': 3,
+        'faq': 4,
         'contacto': 4
     };
     
@@ -675,3 +678,35 @@ function updateParallax() {
 }
 
 updateParallax();
+
+// ============ FAQ ACCORDION ============
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+    const button = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    
+    button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        
+        // Close other items
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+                const otherButton = otherItem.querySelector('.faq-question');
+                const otherAnswer = otherItem.querySelector('.faq-answer');
+                otherButton.setAttribute('aria-expanded', 'false');
+                otherAnswer.style.maxHeight = null;
+                otherItem.classList.remove('active');
+            }
+        });
+        
+        // Toggle current item
+        button.setAttribute('aria-expanded', !isExpanded);
+        item.classList.toggle('active');
+        
+        if (!isExpanded) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+            answer.style.maxHeight = null;
+        }
+    });
+});
