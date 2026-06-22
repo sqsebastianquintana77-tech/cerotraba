@@ -1223,3 +1223,31 @@ footer {
     font-size: 18px;
     line-height: 1;
 }
+
+/* --- TECH ICON (SVG branded) --- */
+.tech-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--brand, var(--accent));
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.tech-logo {
+    color: var(--muted);
+    border-color: rgba(255, 255, 255, 0.07);
+}
+
+.tech-logo:hover {
+    color: var(--fg);
+    background: color-mix(in srgb, var(--brand, var(--accent)) 10%, rgba(10,14,23,0.6));
+    border-color: color-mix(in srgb, var(--brand, var(--accent)) 55%, transparent);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--brand, var(--accent)) 22%, transparent),
+                0 6px 20px rgba(0,0,0,0.35);
+    transform: translateY(-3px);
+}
+
+.tech-logo:hover .tech-icon {
+    transform: scale(1.1) rotate(-5deg);
+}

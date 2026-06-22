@@ -87,27 +87,186 @@
             <section id="tecnologias" class="tech-section">
                 <div class="container">
                     <p class="tech-subtitle">Trabajamos con las mejores tecnologías del mercado global</p>
-                    <div class="tech-slider-container">
-                        <div class="tech-track">
-                            <!-- Ecosistema IA y Automatización -->
-                            <div class="tech-logo"><span class="logo-icon">🤖</span> OpenAI</div>
-                            <div class="tech-logo"><span class="logo-icon">🔗</span> n8n / Make</div>
-                            <div class="tech-logo"><span class="logo-icon">💼</span> HubSpot</div>
-                            <!-- Ecosistema Desarrollo Web -->
-                            <div class="tech-logo"><span class="logo-icon">⚛️</span> React / Next.js</div>
-                            <div class="tech-logo"><span class="logo-icon">🎨</span> Tailwind CSS</div>
-                            <!-- Ecosistema Seguridad -->
-                            <div class="tech-logo"><span class="logo-icon">📹</span> Hikvision / Dahua</div>
-                            <div class="tech-logo"><span class="logo-icon">🌐</span> Ubiquiti Network</div>
-                            <!-- Duplicados para scroll infinito -->
-                            <div class="tech-logo"><span class="logo-icon">🤖</span> OpenAI</div>
-                            <div class="tech-logo"><span class="logo-icon">🔗</span> n8n / Make</div>
-                            <div class="tech-logo"><span class="logo-icon">💼</span> HubSpot</div>
-                            <div class="tech-logo"><span class="logo-icon">⚛️</span> React / Next.js</div>
-                            <div class="tech-logo"><span class="logo-icon">🎨</span> Tailwind CSS</div>
-                            <div class="tech-logo"><span class="logo-icon">📹</span> Hikvision / Dahua</div>
-                            <div class="tech-logo"><span class="logo-icon">🌐</span> Ubiquiti Network</div>
+                </div>
+
+                <!-- Global gradient defs (used by SVG icons inside the track) -->
+                <svg width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+                    <defs>
+                        <linearGradient id="grad-gemini" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#4285F4"/>
+                            <stop offset="100%" stop-color="#9334E6"/>
+                        </linearGradient>
+                        <linearGradient id="grad-ag" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#7C3AED"/>
+                            <stop offset="100%" stop-color="#06B6D4"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <div class="tech-slider-container">
+                    <div class="tech-track">
+
+                        <!-- OpenAI #10A37F -->
+                        <div class="tech-logo" style="--brand:#10A37F">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.94 8.29a5.99 5.99 0 0 0-.52-4.91 6.06 6.06 0 0 0-6.5-2.9A5.99 5.99 0 0 0 9.4 2.47 6.06 6.06 0 0 0 3.63 6.7a5.99 5.99 0 0 0-3.06 4.78 6.06 6.06 0 0 0 2.2 6.55 5.99 5.99 0 0 0 .52 4.91 6.06 6.06 0 0 0 6.5 2.9 5.99 5.99 0 0 0 4.52 2.02 6.06 6.06 0 0 0 5.77-4.21 5.99 5.99 0 0 0 3.07-4.79 6.06 6.06 0 0 0-2.21-6.57zM13.28 2.1a3.62 3.62 0 0 1 2.34.85l-5.4 3.12a.54.54 0 0 0-.27.47v6.24L7.88 11.5V8.16A3.63 3.63 0 0 1 13.28 2.1zM3.27 15.18a3.62 3.62 0 0 1-.44-2.85l5.4 3.12a.54.54 0 0 0 .54 0l6.7-3.87-2.13 1.23-4.94 2.85a3.63 3.63 0 0 1-5.13-.48zM5 5.92a3.62 3.62 0 0 1 2.47-1.48v6.24c0 .2.1.38.27.47l6.7 3.87H11.9L6.95 12.1A3.63 3.63 0 0 1 5 5.92zM10.72 21.9a3.62 3.62 0 0 1-2.34-.85l5.4-3.12a.54.54 0 0 0 .27-.47V11.2l2.07 1.22v3.34A3.63 3.63 0 0 1 10.72 21.9zm9.69-6.18a3.62 3.62 0 0 1-2.47 1.48v-6.24a.54.54 0 0 0-.27-.47l-6.7-3.87h2.54l4.94 2.85A3.63 3.63 0 0 1 20.41 15.72z"/>
+                            </svg>
+                            OpenAI
                         </div>
+
+                        <!-- Gemini (Google) gradient -->
+                        <div class="tech-logo" style="--brand:#4285F4">
+                            <svg class="tech-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="url(#grad-gemini)" d="M12 2C12 7.75 7.75 10.5 2 12c5.75 1.5 10 4.25 10 10 0-5.75 4.25-8.5 10-10C16.25 10.5 12 7.75 12 2z"/>
+                            </svg>
+                            Gemini
+                        </div>
+
+                        <!-- Claude (Anthropic) #D97706 -->
+                        <div class="tech-logo" style="--brand:#D97706">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.827 3.52h3.603l-7.43 16.96H6.397l7.43-16.96zm-7.257 0h3.767L6.906 10.9H3.14l3.43-7.38z"/>
+                            </svg>
+                            Claude
+                        </div>
+
+                        <!-- Antigravity (Google DeepMind) gradient -->
+                        <div class="tech-logo" style="--brand:#7C3AED">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="2.6" fill="url(#grad-ag)"/>
+                                <ellipse cx="12" cy="12" rx="9.5" ry="3.8" stroke="url(#grad-ag)" stroke-width="1.4"/>
+                                <ellipse cx="12" cy="12" rx="9.5" ry="3.8" stroke="url(#grad-ag)" stroke-width="1.4" transform="rotate(65 12 12)"/>
+                            </svg>
+                            Antigravity
+                        </div>
+
+                        <!-- n8n #FF6D5A -->
+                        <div class="tech-logo" style="--brand:#FF6D5A">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4.5" cy="12" r="2.8" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="12" cy="12" r="2.8" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="19.5" cy="12" r="2.8" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="7.3" y1="12" x2="9.2" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="14.8" y1="12" x2="16.7" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            n8n
+                        </div>
+
+                        <!-- Make (formerly Integromat) #6D00CC -->
+                        <div class="tech-logo" style="--brand:#6D00CC">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 2a8 8 0 0 1 6 2.67L7.34 18a8 8 0 0 1 .08-11.85A7.96 7.96 0 0 1 12 4zm0 16a8 8 0 0 1-6-2.67L16.66 6a8 8 0 0 1-4.66 14z"/>
+                            </svg>
+                            Make
+                        </div>
+
+                        <!-- HubSpot #FF7A59 -->
+                        <div class="tech-logo" style="--brand:#FF7A59">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.82 8.27V5.6a2.1 2.1 0 1 0-3.64 0v2.67C7.9 9.1 6.3 11.1 6.3 13.4a6.2 6.2 0 1 0 11.85-2.54 6.16 6.16 0 0 0-4.33-2.59zm-1.82 8.08a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4z"/>
+                                <circle cx="17.9" cy="7.2" r="2.1"/>
+                            </svg>
+                            HubSpot
+                        </div>
+
+                        <!-- React #61DAFB -->
+                        <div class="tech-logo" style="--brand:#61DAFB">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="2.1" fill="#61DAFB"/>
+                                <ellipse cx="12" cy="12" rx="10.5" ry="4" stroke="#61DAFB" stroke-width="1.2"/>
+                                <ellipse cx="12" cy="12" rx="10.5" ry="4" stroke="#61DAFB" stroke-width="1.2" transform="rotate(60 12 12)"/>
+                                <ellipse cx="12" cy="12" rx="10.5" ry="4" stroke="#61DAFB" stroke-width="1.2" transform="rotate(120 12 12)"/>
+                            </svg>
+                            React
+                        </div>
+
+                        <!-- Next.js #fff -->
+                        <div class="tech-logo" style="--brand:#e2e8f0">
+                            <svg class="tech-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10.5" fill="#111"/>
+                                <path fill="#fff" d="M9 7.5h1.8v5.7l5.8-5.7H18.4L12.6 13 18.9 21h-2.2l-5-7.2v-1L9 14v-6.5z"/>
+                            </svg>
+                            Next.js
+                        </div>
+
+                        <!-- Tailwind CSS #06B6D4 -->
+                        <div class="tech-logo" style="--brand:#06B6D4">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19.2 12.001 19.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                            </svg>
+                            Tailwind CSS
+                        </div>
+
+                        <!-- Hikvision #E30613 -->
+                        <div class="tech-logo" style="--brand:#E30613">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="7.5" width="15" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                                <circle cx="9.5" cy="12" r="2.8" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                                <circle cx="9.5" cy="12" r="1.1" fill="currentColor"/>
+                                <path d="M17 9.8 21.5 7.5v9L17 14.2V9.8z" fill="currentColor"/>
+                            </svg>
+                            Hikvision
+                        </div>
+
+                        <!-- Ubiquiti #0559C9 -->
+                        <div class="tech-logo" style="--brand:#0559C9">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M8.5 7v7a3.5 3.5 0 0 0 7 0V7H14v7a2 2 0 0 1-4 0V7H8.5z" fill="currentColor"/>
+                            </svg>
+                            Ubiquiti
+                        </div>
+
+                        <!-- ── DUPLICATES for seamless infinite loop ── -->
+                        <div class="tech-logo" style="--brand:#10A37F">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.94 8.29a5.99 5.99 0 0 0-.52-4.91 6.06 6.06 0 0 0-6.5-2.9A5.99 5.99 0 0 0 9.4 2.47 6.06 6.06 0 0 0 3.63 6.7a5.99 5.99 0 0 0-3.06 4.78 6.06 6.06 0 0 0 2.2 6.55 5.99 5.99 0 0 0 .52 4.91 6.06 6.06 0 0 0 6.5 2.9 5.99 5.99 0 0 0 4.52 2.02 6.06 6.06 0 0 0 5.77-4.21 5.99 5.99 0 0 0 3.07-4.79 6.06 6.06 0 0 0-2.21-6.57zM13.28 2.1a3.62 3.62 0 0 1 2.34.85l-5.4 3.12a.54.54 0 0 0-.27.47v6.24L7.88 11.5V8.16A3.63 3.63 0 0 1 13.28 2.1zM3.27 15.18a3.62 3.62 0 0 1-.44-2.85l5.4 3.12a.54.54 0 0 0 .54 0l6.7-3.87-2.13 1.23-4.94 2.85a3.63 3.63 0 0 1-5.13-.48zM5 5.92a3.62 3.62 0 0 1 2.47-1.48v6.24c0 .2.1.38.27.47l6.7 3.87H11.9L6.95 12.1A3.63 3.63 0 0 1 5 5.92zM10.72 21.9a3.62 3.62 0 0 1-2.34-.85l5.4-3.12a.54.54 0 0 0 .27-.47V11.2l2.07 1.22v3.34A3.63 3.63 0 0 1 10.72 21.9zm9.69-6.18a3.62 3.62 0 0 1-2.47 1.48v-6.24a.54.54 0 0 0-.27-.47l-6.7-3.87h2.54l4.94 2.85A3.63 3.63 0 0 1 20.41 15.72z"/></svg>
+                            OpenAI
+                        </div>
+                        <div class="tech-logo" style="--brand:#4285F4">
+                            <svg class="tech-icon" viewBox="0 0 24 24"><path fill="url(#grad-gemini)" d="M12 2C12 7.75 7.75 10.5 2 12c5.75 1.5 10 4.25 10 10 0-5.75 4.25-8.5 10-10C16.25 10.5 12 7.75 12 2z"/></svg>
+                            Gemini
+                        </div>
+                        <div class="tech-logo" style="--brand:#D97706">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.827 3.52h3.603l-7.43 16.96H6.397l7.43-16.96zm-7.257 0h3.767L6.906 10.9H3.14l3.43-7.38z"/></svg>
+                            Claude
+                        </div>
+                        <div class="tech-logo" style="--brand:#7C3AED">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.6" fill="url(#grad-ag)"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" stroke="url(#grad-ag)" stroke-width="1.4"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" stroke="url(#grad-ag)" stroke-width="1.4" transform="rotate(65 12 12)"/></svg>
+                            Antigravity
+                        </div>
+                        <div class="tech-logo" style="--brand:#FF6D5A">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="none"><circle cx="4.5" cy="12" r="2.8" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.8" stroke="currentColor" stroke-width="1.5"/><circle cx="19.5" cy="12" r="2.8" stroke="currentColor" stroke-width="1.5"/><line x1="7.3" y1="12" x2="9.2" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="14.8" y1="12" x2="16.7" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            n8n
+                        </div>
+                        <div class="tech-logo" style="--brand:#6D00CC">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 2a8 8 0 0 1 6 2.67L7.34 18a8 8 0 0 1 .08-11.85A7.96 7.96 0 0 1 12 4zm0 16a8 8 0 0 1-6-2.67L16.66 6a8 8 0 0 1-4.66 14z"/></svg>
+                            Make
+                        </div>
+                        <div class="tech-logo" style="--brand:#FF7A59">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.82 8.27V5.6a2.1 2.1 0 1 0-3.64 0v2.67C7.9 9.1 6.3 11.1 6.3 13.4a6.2 6.2 0 1 0 11.85-2.54 6.16 6.16 0 0 0-4.33-2.59zm-1.82 8.08a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4z"/><circle cx="17.9" cy="7.2" r="2.1"/></svg>
+                            HubSpot
+                        </div>
+                        <div class="tech-logo" style="--brand:#61DAFB">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.1" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="10.5" ry="4" stroke="#61DAFB" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="10.5" ry="4" stroke="#61DAFB" stroke-width="1.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10.5" ry="4" stroke="#61DAFB" stroke-width="1.2" transform="rotate(120 12 12)"/></svg>
+                            React
+                        </div>
+                        <div class="tech-logo" style="--brand:#e2e8f0">
+                            <svg class="tech-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#111"/><path fill="#fff" d="M9 7.5h1.8v5.7l5.8-5.7H18.4L12.6 13 18.9 21h-2.2l-5-7.2v-1L9 14v-6.5z"/></svg>
+                            Next.js
+                        </div>
+                        <div class="tech-logo" style="--brand:#06B6D4">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19.2 12.001 19.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
+                            Tailwind CSS
+                        </div>
+                        <div class="tech-logo" style="--brand:#E30613">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7.5" width="15" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="9.5" cy="12" r="2.8" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="12" r="1.1" fill="currentColor"/><path d="M17 9.8 21.5 7.5v9L17 14.2V9.8z" fill="currentColor"/></svg>
+                            Hikvision
+                        </div>
+                        <div class="tech-logo" style="--brand:#0559C9">
+                            <svg class="tech-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 7v7a3.5 3.5 0 0 0 7 0V7H14v7a2 2 0 0 1-4 0V7H8.5z" fill="currentColor"/></svg>
+                            Ubiquiti
+                        </div>
+
                     </div>
                 </div>
             </section>
