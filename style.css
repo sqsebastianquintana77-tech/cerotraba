@@ -1047,3 +1047,89 @@ footer {
         text-align: center;
     }
 }
+
+/* --- WHATSAPP FLOATING BUTTON --- */
+#whatsapp-fab {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+#whatsapp-fab:hover {
+    transform: scale(1.12) translateY(-3px);
+    box-shadow: 0 14px 40px rgba(37, 211, 102, 0.65);
+}
+
+.fab-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(37, 211, 102, 0.4);
+    animation: fab-pulse-ring 2.2s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes fab-pulse-ring {
+    0%   { transform: scale(1);   opacity: 0.7; }
+    70%  { transform: scale(1.6); opacity: 0;   }
+    100% { transform: scale(1.6); opacity: 0;   }
+}
+
+.fab-tooltip {
+    position: absolute;
+    right: calc(100% + 14px);
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    background: rgba(10, 14, 23, 0.92);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 7px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(37, 211, 102, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.fab-tooltip::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-left-color: rgba(10, 14, 23, 0.92);
+}
+
+#whatsapp-fab:hover .fab-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 768px) {
+    #whatsapp-fab {
+        bottom: 20px;
+        right: 20px;
+        width: 54px;
+        height: 54px;
+    }
+    .fab-tooltip {
+        display: none;
+    }
+}
