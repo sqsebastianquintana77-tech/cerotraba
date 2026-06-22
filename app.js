@@ -300,6 +300,7 @@ function updateActiveSection(sectionId) {
         'calculadora': 3,
         'testimonios': 3,
         'faq': 4,
+        'blog': 4,
         'contacto': 4
     };
     
